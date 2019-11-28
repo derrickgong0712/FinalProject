@@ -19,11 +19,9 @@ public class Person {
 
     /**
      * calculate a person's BMI.
-     * @param weight weight
-     * @param height height
      * @return BMI value.
      */
-    public double getBMI(double weight, double height) {
+    public double getBMI() {
         double bmi = weight / (height * height);
         return bmi;
     }
