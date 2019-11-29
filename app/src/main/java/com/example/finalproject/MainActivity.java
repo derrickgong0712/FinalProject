@@ -19,22 +19,22 @@ public class MainActivity extends AppCompatActivity {
                 opendraftdata();
             }
         });
-        Button start = findViewById(R.id.start);
+        /*Button start = findViewById(R.id.start);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openAnalysis();
             }
-        });
+        });*/
     }
     public void opendraftdata() {
         Intent intent = new Intent(this, Draftdata.class);
         startActivity(intent);
         finish();
     }
-    public void openAnalysis() {
+    /*public void openAnalysis() {
         Intent intent = new Intent(this, Analysis.class);
         startActivity(intent);
         finish();
-    }
+    }*/
 }

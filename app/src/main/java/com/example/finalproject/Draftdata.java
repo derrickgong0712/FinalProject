@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 public class Draftdata extends AppCompatActivity {
-    Intent intent = new Intent(this, MainActivity.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +21,17 @@ public class Draftdata extends AppCompatActivity {
         textView2.setVisibility(View.VISIBLE);
         textView3.setVisibility(View.VISIBLE);
         Button complete = findViewById(R.id.button4);
-
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                storedata();
+
                 openMainActivity();
             }
         });
     }
-    private void storedata(){
+
+    private void openMainActivity() {
+        Intent intent = new Intent(this, Analysis.class);
         EditText height = findViewById(R.id.height);
         EditText weight = findViewById(R.id.weight);
         EditText age = findViewById(R.id.age);
@@ -44,10 +44,7 @@ public class Draftdata extends AppCompatActivity {
         intent.putExtra("height", realheight);
         intent.putExtra("weight", realweight);
         intent.putExtra("age", realage);
-    }
-    private void openMainActivity() {
         startActivity(intent);
         finish();
     }
 }
-
