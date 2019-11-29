@@ -19,7 +19,7 @@
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="height(cm)"
+            android:text="height(m)"
             android:textSize="30sp" />
 
         <EditText
