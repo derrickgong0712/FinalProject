@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class Analysis extends AppCompatActivity {
+
     /** weight. */
+
     private double weight;
 
     /** height. */
@@ -17,8 +19,17 @@ public class Analysis extends AppCompatActivity {
     private int age;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /** weight. */
+        double weight;
+
+        /** height. */
+        double height;
+
+        /** age. */
+        int age;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analysis);
         TextView bmi = findViewById(R.id.bmi);

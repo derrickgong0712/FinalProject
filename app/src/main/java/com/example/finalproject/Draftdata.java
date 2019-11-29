@@ -8,13 +8,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-public class draftdata extends AppCompatActivity {
-
+public class Draftdata extends AppCompatActivity {
+    Intent intent = new Intent(this, MainActivity.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.draftdata);
+        setContentView(R.layout.activity_draftdata);
         TextView textView1 = findViewById(R.id.textView1);
         TextView textView2 = findViewById(R.id.textView2);
         TextView textView3 = findViewById(R.id.textView3);
@@ -26,25 +26,28 @@ public class draftdata extends AppCompatActivity {
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                storedata();
                 openMainActivity();
             }
         });
-        storedata();
     }
     private void storedata(){
         EditText height = findViewById(R.id.height);
         EditText weight = findViewById(R.id.weight);
+        EditText age = findViewById(R.id.age);
         String theheight = height.getText().toString();
         double realheight = Double.parseDouble(theheight);
         String theweight = weight.getText().toString();
         double realweight = Double.parseDouble(theweight);
-        Intent intent = getIntent();
+        String theage = age.getText().toString();
+        int realage = Integer.parseInt(theage);
         intent.putExtra("height", realheight);
         intent.putExtra("weight", realweight);
+        intent.putExtra("age", realage);
     }
     private void openMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }
 

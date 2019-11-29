@@ -27,14 +27,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     public void opendraftdata() {
         Intent intent = new Intent(this, Draftdata.class);
         startActivity(intent);
+        finish();
     }
-
     public void openAnalysis() {
         Intent intent = new Intent(this, Analysis.class);
         startActivity(intent);
+        finish();
     }
 }
