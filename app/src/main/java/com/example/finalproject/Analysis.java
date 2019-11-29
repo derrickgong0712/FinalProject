@@ -38,10 +38,11 @@ public class Analysis extends AppCompatActivity {
         weight = intent.getDoubleExtra("weight", 0.0);
         height = intent.getDoubleExtra("height", 0.0);
         age = intent.getIntExtra("age", 0);
-        Person person = new Person(weight, height, age);
+        com.example.finalproject.Person person = new Person(weight, height, age);
         Double value = person.getBMI();
         int currentstatus = person.weightstatus(value);
-        bmi.setText(value.toString());
+        Double shortervalue = roundDown5(value);
+        bmi.setText(shortervalue.toString());
         String x = getstatus(currentstatus);
         status.setText(x);
     }
@@ -56,5 +57,8 @@ public class Analysis extends AppCompatActivity {
             a = "Overweight";
         }
         return a;
+    }
+    public static double roundDown5(double number) {
+        return ((long)(number * 1e5)) / 1e5;
     }
 }
