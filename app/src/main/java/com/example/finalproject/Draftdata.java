@@ -31,7 +31,7 @@ public class Draftdata extends AppCompatActivity {
     }
 
     private void openMainActivity() {
-        Intent intent = new Intent(this, Analysis.class);
+        Intent intent = new Intent(this, MainActivity.class);
         EditText height = findViewById(R.id.height);
         EditText weight = findViewById(R.id.weight);
         EditText age = findViewById(R.id.age);
