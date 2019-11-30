@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    double weight;
-    double height;
-    int age;
+    private double weight;
+    private double height;
+    private int age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void opendraftdata() {
-        Intent intent = new Intent(this, draftdata.class);
+        Intent intent = new Intent(this, Draftdata.class);
         startActivity(intent);
     }
     public void openAnalysis() {
